@@ -3,7 +3,13 @@
  1/31/15
  
  Parses a dictionary text file and creates a sub-dictionary containing
- words of length N (3, 4 or 5 letters). Used for the Thue Systems project.
+ words of length N, stored in a vector.
+ 
+ That sub-dictionary is then transformed into an undirected, unweighted graph
+ represented as an adjecency list. Each word is a node, and each node's neighbors
+ are defined by words that differ by 1 letter (e.g. "DOG" and "HOG" are neighbors).
+
+ The program then calculates the shortest path between two given words of length N.
  */
 
 #include <fstream>
